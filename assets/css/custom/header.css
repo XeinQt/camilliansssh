@@ -1,0 +1,44 @@
+/* sub header */
+.sub-header {
+  background: #04225c;
+  color: white;
+}
+
+.sub-header ul.info li {
+  color: white;
+}
+
+.sub-header ul.info li i {
+  color: #b12318;
+}
+
+.sub-header ul.social-links li a:hover {
+  background-color: #b12318;
+}
+
+/* main header */
+.header-area .main-nav .nav li:last-child a {
+  display: none;
+}
+
+.header-area .main-nav .nav li a.active {
+  color: #b12318;
+}
+.header-area .main-nav .nav li a:hover {
+  color: #b12318;
+}
+
+.main-nav {
+  overflow: hidden;
+}
+
+.logo-image {
+  width: 150px;
+  margin-top: 19px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,87 @@
+.container-services {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0c2d6a; /* deep navy blue */
+  margin-bottom: 8px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 3px;
+  background: #c20d0d; /* red underline */
+  margin: 0 auto 20px;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Cards layout */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 25px 20px;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.card p {
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .card {
+    text-align: left;
+  }
+}

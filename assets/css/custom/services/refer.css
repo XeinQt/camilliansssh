@@ -1,0 +1,59 @@
+/* Section Styling */
+.refer-section {
+  width: 100%;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.refer-container {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.refer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.refer-text {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.refer-btn {
+  display: inline-block;
+  background: #b3251f; /* deep red tone */
+  color: #fff;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.refer-btn:hover {
+  background: #921d18;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .refer-title {
+    font-size: 1.7rem;
+  }
+
+  .refer-text {
+    font-size: 1rem;
+  }
+
+  .refer-btn {
+    padding: 12px 30px;
+  }
+}

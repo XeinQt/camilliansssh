@@ -1,0 +1,46 @@
+.contact-cards {
+  margin-top: 2rem;
+}
+
+.contactUsTtitle {
+  color: #b22222;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+}
+
+.contact-card .icon {
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.contact-card .icon img {
+  max-width: 48px;
+  height: auto;
+}
+
+.contact-card .details h6 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.contact-card .details span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #777;
+}

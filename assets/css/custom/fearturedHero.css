@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f9f9f9; /* light gray similar to screenshot background */
+  color: #000;
+  line-height: 1.6;
+}
+
+.healthcare-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.healthcare-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.healthcare-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a2b5f; /* dark navy blue */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.healthcare-section .underline {
+  display: inline-block;
+  width: 50px;
+  height: 4px;
+  background: #b22222; /* dark red underline */
+  margin: 0 auto 25px;
+}
+
+.healthcare-section p {
+  font-size: 1rem;
+  color: #111;
+  padding: 0 10px;
+}
+
+/* Responsive typography */
+@media (min-width: 768px) {
+  .healthcare-section h2 {
+    font-size: 2.5rem;
+  }
+  .healthcare-section p {
+    font-size: 1.1rem;
+  }
+}

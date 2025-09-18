@@ -1,0 +1,50 @@
+/* Section background */
+.mission-vision {
+  background: url("../../image/mission_vission.png") center center/cover
+    no-repeat;
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+}
+
+/* Overlay container for cards */
+.mission-vision .overlay {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap; /* allow wrap on small screens */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card style */
+.mission-vision .card {
+  flex: 1 1 300px; /* grow and shrink, minimum 300px */
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparent background */
+  border: 1px solid #fff;
+  padding: 40px 25px;
+  text-align: center;
+  backdrop-filter: blur(2px); /* subtle blur behind text (optional) */
+}
+
+.mission-vision .card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.mission-vision .card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .mission-vision .card h2 {
+    font-size: 2rem;
+  }
+  .mission-vision .card p {
+    font-size: 1.1rem;
+  }
+}
