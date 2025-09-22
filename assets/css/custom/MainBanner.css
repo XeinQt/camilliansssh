@@ -123,24 +123,30 @@ html {
 .service-box {
   flex: 1 1 300px; /* grow, shrink, base width */
   padding: 40px 20px;
-  color: #fff;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 260px;
+  gap: 15px;
 }
 
 .service-box.blue {
-  background-color: #08275e; /* dark navy */
+  color: #08275e;
+  border: 5px solid #08275e;
+  border-radius: 20px;
 }
 
 .service-box.red {
-  background-color: #a31717; /* deep red */
+  color: #a31717;
+  border: 5px solid #a31717;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
 }
 
-.service-box h3 {
-  color: white;
+.service-box.red h3 {
+  color: #a31717;
 }
 
 .service-box .icon {
@@ -154,7 +160,6 @@ html {
   letter-spacing: 0.5px;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .service-box {
     padding: 30px 15px;
