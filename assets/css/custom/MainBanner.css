@@ -135,11 +135,17 @@ html {
   color: #08275e;
   border: 5px solid #08275e;
   border-radius: 20px;
+  background-color: #08275e30;
+}
+
+.service-box.blue h3 {
+  color: #08275e;
 }
 
 .service-box.red {
   color: #a31717;
   border: 5px solid #a31717;
+  background-color: #a3171730;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 20px;
