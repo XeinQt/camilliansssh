@@ -1,17 +1,3 @@
-/* Base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f7f8fa;
-  color: #333;
-  line-height: 1.6;
-}
-
 /* Section container */
 .faq-section {
   max-width: 800px;

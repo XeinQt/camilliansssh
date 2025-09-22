@@ -1,0 +1,43 @@
+.cta-stack {
+  min-height: 20vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 18px 30px;
+  margin: 12px 0;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.link-btn.danger {
+  background-color: #b22222;
+  color: #fff;
+}
+
+.link-btn.danger:hover {
+  background-color: #8b1a1a;
+}
+
+.notice {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+  margin: 20px 0;
+}
+
+@media (max-width: 480px) {
+  .link-btn {
+    padding: 20px 0;
+    font-size: 1.05rem;
+  }
+}

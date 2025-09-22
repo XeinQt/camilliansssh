@@ -1,0 +1,81 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f7f7f7;
+  color: #222;
+}
+
+/* Full-width section */
+.bio-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 60px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Inner container to keep text comfortable on large screens */
+.bio-container {
+  max-width: 1200px; /* keeps text from spanning edge-to-edge */
+  margin: 0 auto; /* center it */
+}
+
+/* Headings */
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.bio-name {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.bio-name span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Paragraphs */
+.bio-text {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .bio-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .bio-name {
+    font-size: 1.1rem;
+  }
+  .bio-text {
+    font-size: 0.95rem;
+  }
+}
