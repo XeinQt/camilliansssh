@@ -3,27 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sliding Gallery – 3 Visible, 1-Step Scroll</title>
+    <title>Finance Landing</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-    <section class="carousel-container">
-      <button class="prev">&#10094;</button>
+    <header class="navbar">
+      <div class="logo">Finapp</div>
+      <nav>
+        <ul>
+          <li><a href="#">Invest</a></li>
+          <li><a href="#">Plans</a></li>
+          <li><a href="#">Guide</a></li>
+          <li><a href="#">Features</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <div class="carousel-window">
-        <div class="carousel-track">
-          <img src="https://picsum.photos/id/1015/400/250" alt="" />
-          <img src="https://picsum.photos/id/1016/400/250" alt="" />
-          <img src="https://picsum.photos/id/1018/400/250" alt="" />
-          <img src="https://picsum.photos/id/1019/400/250" alt="" />
-          <img src="https://picsum.photos/id/1020/400/250" alt="" />
-          <img src="https://picsum.photos/id/1021/400/250" alt="" />
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Personal finance,<br /><span>reimagined</span></h1>
+        <p>
+          Download the Finapp mobile app today and take control of your money.
+        </p>
+
+        <div class="store-buttons">
+          <a href="#" class="store-btn">
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="App Store"
+            />
+          </a>
+          <a href="#" class="store-btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Google Play"
+            />
+          </a>
         </div>
       </div>
 
-      <button class="next">&#10095;</button>
+      <div class="hero-image">
+        <img src="phone-mockup.png" alt="App screenshot" />
+        <!-- replace phone-mockup.png with your own transparent phone image -->
+      </div>
     </section>
-
-    <script src="script.js"></script>
   </body>
 </html>

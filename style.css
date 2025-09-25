@@ -1,48 +1,92 @@
-body {
+/* Reset & Base */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.5;
 }
 
-.carousel-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 40px auto;
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.hero-text {
+  flex: 1 1 380px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.hero-text h1 span {
+  color: #4f46e5;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 420px;
 }
 
-.carousel-window {
-  overflow: hidden;
-  width: 100%; /* full width for 3 images */
-}
-
-.carousel-track {
+/* Store Buttons */
+.store-buttons {
   display: flex;
-  transition: transform 0.4s ease-in-out;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.store-btn img {
+  height: 48px;
 }
 
-.carousel-track img {
-  width: 33.333%; /* exactly 3 images fit in the window */
-  flex-shrink: 0;
-  border-radius: 8px;
-  margin-right: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+/* Image */
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 280px;
+  width: 100%;
 }
 
-/* Nav buttons */
-.prev,
-.next {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  cursor: pointer;
-  font-size: 24px;
-  border-radius: 50%;
-  z-index: 10;
-}
-
-.prev:hover,
-.next:hover {
-  background: rgba(0, 0, 0, 0.7);
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2.3rem;
+  }
 }

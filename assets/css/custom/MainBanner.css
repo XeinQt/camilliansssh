@@ -173,6 +173,13 @@ html {
   .service-box .icon {
     font-size: 50px;
   }
+
+  .service-box.red {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   .service-box h3 {
     font-size: 1.2rem;
   }
@@ -181,5 +188,12 @@ html {
 @media (max-width: 480px) {
   .service-box {
     flex: 1 1 100%;
+  }
+
+  .service-box.red {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
