@@ -1,7 +1,7 @@
 /* Mission & Vision Section */
 
 .mission-vision {
-  background: #1e1e1e;
+  background: #cdcdcd;
   margin-top: 100px;
   text-align: center;
   padding: 4rem 0px;
@@ -15,7 +15,7 @@
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 3rem;
-  color: white;
+  color: #08275e;
 }
 .mv-header .highlight {
   color: var(--primary);
