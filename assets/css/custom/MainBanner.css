@@ -132,27 +132,27 @@ html {
 }
 
 .service-box.blue {
-  color: #08275e;
+  color: white;
   border: 5px solid #08275e;
   border-radius: 20px;
-  background-color: #08275e30;
+  background-color: #08275e;
 }
 
 .service-box.blue h3 {
-  color: #08275e;
+  color: white;
 }
 
 .service-box.red {
-  color: #a31717;
+  color: white;
   border: 5px solid #a31717;
-  background-color: #a3171730;
+  background-color: #a31717;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 20px;
 }
 
 .service-box.red h3 {
-  color: #a31717;
+  color: white;
 }
 
 .service-box .icon {

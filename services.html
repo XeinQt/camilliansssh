@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="assets/css/custom/services/services.css" />
     <link rel="stylesheet" href="assets/css/custom/services/refer.css" />
     <link rel="stylesheet" href="assets/css/custom/services/insurance.css" />
-    <link rel="stylesheet" href="assets/css/custom/services/gallery.css" />
+    <link rel="stylesheet" href="assets/css/custom/gallery.css" />
+    <link rel="stylesheet" href="assets/css/custom/all/all.css" />
 
     <link
       rel="stylesheet"
@@ -246,21 +247,18 @@
       <button class="join-btn">Join Us</button>
     </section>
 
-    <section class="gallery">
-      <div class="gallery-item">
-        <img src="assets/image/gallery01.png" alt="Caregiver with senior" />
-      </div>
-      <div class="gallery-item">
-        <img src="assets/image/gallery02.png" alt="Doctor consultation" />
-      </div>
-      <div class="gallery-item">
-        <img src="assets/image/gallery03.png" alt="Physical therapy session" />
-      </div>
-      <div class="gallery-item">
-        <img
-          src="assets/image/gallery04.png"
-          alt="Caregiver assisting patient"
-        />
+    <section class="carousel-container">
+      <div class="carousel-window">
+        <div class="carousel-track" id="carousel-track">
+          <img src="assets/image/gallery01.png" alt="" />
+          <img src="assets/image/gallery02.png" alt="" />
+          <img src="assets/image/gallery03.png" alt="" />
+          <img src="assets/image/gallery04.png" alt="" />
+          <img src="assets/image/gallery01.png" alt="" />
+          <img src="assets/image/gallery02.png" alt="" />
+          <img src="assets/image/gallery03.png" alt="" />
+          <img src="assets/image/gallery04.png" alt="" />
+        </div>
       </div>
     </section>
 
@@ -390,6 +388,38 @@
       <p class="text">Copyright © 2025 Camillians. All rights reserved</p>
     </footer>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.getElementById("carousel-track");
+        let scrollAmount = 0;
+        let paused = false; // <-- new flag
+
+        // Duplicate the images once more for a smooth loop
+        track.innerHTML += track.innerHTML;
+
+        function animate() {
+          if (!paused) {
+            // only move when not hovered
+            scrollAmount += 1; // speed (pixels per frame)
+            if (scrollAmount >= track.scrollWidth / 2) {
+              scrollAmount = 0;
+            }
+            track.style.transform = `translateX(${-scrollAmount}px)`;
+          }
+          requestAnimationFrame(animate);
+        }
+
+        // Hover events to toggle pause
+        track.addEventListener("mouseenter", () => (paused = true));
+        track.addEventListener("mouseleave", () => (paused = false));
+
+        // Initial styles
+        track.style.display = "flex";
+        track.style.transition = "none";
+
+        animate();
+      });
+    </script>
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

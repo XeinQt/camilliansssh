@@ -1,48 +1,19 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 .carousel-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 40px auto;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carousel-window {
+  width: 100%;
   overflow: hidden;
-  width: 100%; /* full width for 3 images */
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.4s ease-in-out;
+  white-space: nowrap;
 }
 
 .carousel-track img {
-  width: 33.333%; /* exactly 3 images fit in the window */
+  width: 300px; /* adjust to your image size */
   flex-shrink: 0;
-  border-radius: 8px;
-  margin-right: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Nav buttons */
-.prev,
-.next {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 24px;
-  border-radius: 50%;
-  z-index: 10;
-}
-
-.prev:hover,
-.next:hover {
-  background: rgba(0, 0, 0, 0.7);
 }

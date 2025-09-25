@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/css/custom/mission_vision.css" />
     <link rel="stylesheet" href="assets/css/custom/services/gallery.css" />
     <link rel="stylesheet" href="assets/css/custom/gallery.css" />
+    <link rel="stylesheet" href="assets/css/custom/all/all.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
@@ -122,6 +123,7 @@
         </p>
         <a href="tel:+11234567890" class="btn">Call Now</a>
       </div>
+      6
     </section>
 
     <section class="healthcare-section">
@@ -162,9 +164,19 @@
     </section>
 
     <section class="mission-vision">
-      <div class="overlay">
-        <div class="card">
-          <h2>MISSION</h2>
+      <div class="container mv-header">
+        <h2>
+          <span class="highlight">Mission</span> &
+          <span class="highlight">Vision</span>
+        </h2>
+      </div>
+
+      <div class="container mv-grid">
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Our Mission</h3>
           <p>
             We strive to help as many people as possible, giving a helping hand
             to our patients as well as case managers, social workers, hospitals,
@@ -172,8 +184,11 @@
           </p>
         </div>
 
-        <div class="card">
-          <h2>VISION</h2>
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Our Vision</h3>
           <p>
             We strive to be a leading provider of a wide range of quality home
             healthcare services. Our team is committed to providing innovative,
@@ -184,14 +199,12 @@
     </section>
 
     <section class="join-section">
-      <button class="join-btn">Join Us</button>
+      <a href="aboutUs.html" class="join-btn">Learn more About Us</a>
     </section>
 
     <section class="carousel-container">
-      <button class="prev">&#10094;</button>
-
       <div class="carousel-window">
-        <div class="carousel-track">
+        <div class="carousel-track" id="carousel-track">
           <img src="assets/image/gallery01.png" alt="" />
           <img src="assets/image/gallery02.png" alt="" />
           <img src="assets/image/gallery03.png" alt="" />
@@ -202,8 +215,6 @@
           <img src="assets/image/gallery04.png" alt="" />
         </div>
       </div>
-
-      <button class="next">&#10095;</button>
     </section>
 
     <div class="contact section">
@@ -330,6 +341,39 @@
     <footer>
       <p class="text">Copyright © 2025 Camillians. All rights reserved</p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.getElementById("carousel-track");
+        let scrollAmount = 0;
+        let paused = false; // <-- new flag
+
+        // Duplicate the images once more for a smooth loop
+        track.innerHTML += track.innerHTML;
+
+        function animate() {
+          if (!paused) {
+            // only move when not hovered
+            scrollAmount += 1; // speed (pixels per frame)
+            if (scrollAmount >= track.scrollWidth / 2) {
+              scrollAmount = 0;
+            }
+            track.style.transform = `translateX(${-scrollAmount}px)`;
+          }
+          requestAnimationFrame(animate);
+        }
+
+        // Hover events to toggle pause
+        track.addEventListener("mouseenter", () => (paused = true));
+        track.addEventListener("mouseleave", () => (paused = false));
+
+        // Initial styles
+        track.style.display = "flex";
+        track.style.transition = "none";
+
+        animate();
+      });
+    </script>
 
     <script>
       const track = document.querySelector(".carousel-track");
