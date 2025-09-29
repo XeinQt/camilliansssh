@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
 
-    <title>Villa Agency - Real Estate HTML5 Template</title>
+    <title>Camillians</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -341,39 +341,6 @@
     <footer>
       <p class="text">Copyright © 2025 Camillians. All rights reserved</p>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const track = document.getElementById("carousel-track");
-        let scrollAmount = 0;
-        let paused = false; // <-- new flag
-
-        // Duplicate the images once more for a smooth loop
-        track.innerHTML += track.innerHTML;
-
-        function animate() {
-          if (!paused) {
-            // only move when not hovered
-            scrollAmount += 1; // speed (pixels per frame)
-            if (scrollAmount >= track.scrollWidth / 2) {
-              scrollAmount = 0;
-            }
-            track.style.transform = `translateX(${-scrollAmount}px)`;
-          }
-          requestAnimationFrame(animate);
-        }
-
-        // Hover events to toggle pause
-        track.addEventListener("mouseenter", () => (paused = true));
-        track.addEventListener("mouseleave", () => (paused = false));
-
-        // Initial styles
-        track.style.display = "flex";
-        track.style.transition = "none";
-
-        animate();
-      });
-    </script>
 
     <script>
       const track = document.querySelector(".carousel-track");
