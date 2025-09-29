@@ -343,35 +343,39 @@
     </footer>
 
     <script>
-      const track = document.querySelector(".carousel-track");
-      const slides = document.querySelectorAll(".carousel-track img");
-      const prevBtn = document.querySelector(".prev");
-      const nextBtn = document.querySelector(".next");
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.getElementById("carousel-track");
+        let scrollAmount = 0;
+        let paused = false; // <-- new flag
 
-      const visibleCount = 3; // how many images visible at once
-      const total = slides.length;
-      let index = 0; // leftmost visible image
+        // Duplicate the images once more for a smooth loop
+        track.innerHTML += track.innerHTML;
 
-      function update() {
-        // Move the track left by index * (100 / visibleCount) percent
-        track.style.transform = `translateX(-${index * (100 / visibleCount)}%)`;
-      }
-
-      nextBtn.addEventListener("click", () => {
-        if (index < total - visibleCount) {
-          // stop when last set reached
-          index++;
-          update();
+        function animate() {
+          if (!paused) {
+            // only move when not hovered
+            scrollAmount += 1; // speed (pixels per frame)
+            if (scrollAmount >= track.scrollWidth / 2) {
+              scrollAmount = 0;
+            }
+            track.style.transform = `translateX(${-scrollAmount}px)`;
+          }
+          requestAnimationFrame(animate);
         }
-      });
 
-      prevBtn.addEventListener("click", () => {
-        if (index > 0) {
-          index--;
-          update();
-        }
+        // Hover events to toggle pause
+        track.addEventListener("mouseenter", () => (paused = true));
+        track.addEventListener("mouseleave", () => (paused = false));
+
+        // Initial styles
+        track.style.display = "flex";
+        track.style.transition = "none";
+
+        animate();
       });
     </script>
+
+    <script src="assets/js/custom.js"></script>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
