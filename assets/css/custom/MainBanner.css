@@ -170,6 +170,9 @@ html {
   .service-box {
     padding: 30px 15px;
   }
+  .services {
+    padding: 10px;
+  }
   .service-box .icon {
     font-size: 50px;
   }
