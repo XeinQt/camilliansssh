@@ -252,14 +252,12 @@ header {
 
 .mobile-subheader {
   display: flex;
+  margin-top: -20px;
 }
 
 /* Sub-header inside mobile nav */
 .mobile-subheader {
   display: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 15px;
-  margin-top: 10px;
 }
 
 .mobile-subheader .info,
@@ -287,7 +285,7 @@ header {
 
 .social-links {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   justify-content: space-between;
   justify-content: center;
 }
@@ -307,6 +305,12 @@ header {
   .show {
     width: 50%;
   }
+
+  .nav.show {
+    display: flex;
+    margin-top: -10px;
+    right: 0;
+  }
 }
 
 .mobile-subheader .social-links li {
@@ -322,4 +326,8 @@ header {
 
 .mobile-subheader .social-links li:hover {
   transform: scale(1.1);
+}
+
+.phoneNumber {
+  margin-top: 20px;
 }
