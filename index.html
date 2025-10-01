@@ -50,68 +50,55 @@
 
     <div class="sub-header">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8">
-            <ul class="info">
-              <li><i class="fa fa-phone"></i> 832-649-6092</li>
-              <li><i class="fa fa-fax"></i>1-800-658-0781</li>
-              <li><i class="fa fa-envelope"></i>fax@camillianshhs.com</li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <ul class="social-links">
-              <li>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="https://x.com/minthu" target="_blank"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-            </ul>
-          </div>
+        <div class="sub-header-content">
+          <ul class="info">
+            <li><i class="fa fa-phone"></i> 832-649-6092</li>
+            <li><i class="fa fa-fax"></i> 1-800-658-0781</li>
+            <li><i class="fa fa-envelope"></i> fax@camillianshhs.com</li>
+          </ul>
+
+          <ul class="social-links">
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://x.com/minthu" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="main-nav">
-              <!-- ***** Logo Start ***** -->
-              <a href="index.html" class="logo">
-                <img class="logo-image" src="assets/image/logo.png" alt="" />
-              </a>
-              <!-- ***** Logo End ***** -->
-              <!-- ***** Menu Start ***** -->
-              <ul class="nav">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="why.html">Why Camillians?</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="carrer.html">Careers</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li>
-                  <a class="black-button" href="#">Contact Us</a>
-                </li>
-              </ul>
-              <a class="menu-trigger">
-                <span>Menu</span>
-              </a>
-              <!-- ***** Menu End ***** -->
-            </nav>
-          </div>
-        </div>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="assets/image/logo.png" alt="" /></a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="why.html">Why Camillians?</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="carrer.html">Careers</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </header>
+
     <!-- ***** Header Area End ***** -->
 
     <section class="hero">
@@ -342,38 +329,8 @@
       <p class="text">Copyright © 2025 Camillians. All rights reserved</p>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const track = document.getElementById("carousel-track");
-        let scrollAmount = 0;
-        let paused = false; // <-- new flag
-
-        // Duplicate the images once more for a smooth loop
-        track.innerHTML += track.innerHTML;
-
-        function animate() {
-          if (!paused) {
-            // only move when not hovered
-            scrollAmount += 1; // speed (pixels per frame)
-            if (scrollAmount >= track.scrollWidth / 2) {
-              scrollAmount = 0;
-            }
-            track.style.transform = `translateX(${-scrollAmount}px)`;
-          }
-          requestAnimationFrame(animate);
-        }
-
-        // Hover events to toggle pause
-        track.addEventListener("mouseenter", () => (paused = true));
-        track.addEventListener("mouseleave", () => (paused = false));
-
-        // Initial styles
-        track.style.display = "flex";
-        track.style.transition = "none";
-
-        animate();
-      });
-    </script>
+    <script src="assets/js/custom/gallery.js"></script>
+    <script src="assets/js/custom/header.js"></script>
 
     <script src="assets/js/custom.js"></script>
 

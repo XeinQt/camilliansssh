@@ -3,53 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Finance Landing</title>
+    <title>Responsive Header</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo">Finapp</div>
-      <nav>
-        <ul>
-          <li><a href="#">Invest</a></li>
-          <li><a href="#">Plans</a></li>
-          <li><a href="#">Guide</a></li>
-          <li><a href="#">Features</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="sub-header">
+      <div class="container">
+        <div class="sub-header-content">
+          <ul class="info">
+            <li><i class="fa fa-phone"></i> 832-649-6092</li>
+            <li><i class="fa fa-fax"></i> 1-800-658-0781</li>
+            <li><i class="fa fa-envelope"></i> fax@camillianshhs.com</li>
+          </ul>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Personal finance,<br /><span>reimagined</span></h1>
-        <p>
-          Download the Finapp mobile app today and take control of your money.
-        </p>
-
-        <div class="store-buttons">
-          <a href="#" class="store-btn">
-            <img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-              alt="App Store"
-            />
-          </a>
-          <a href="#" class="store-btn">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Google Play"
-            />
-          </a>
+          <ul class="social-links">
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://x.com/minthu" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
 
-      <div class="hero-image">
-        <img src="phone-mockup.png" alt="App screenshot" />
-        <!-- replace phone-mockup.png with your own transparent phone image -->
+    <!-- ***** Header Area Start ***** -->
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="assets/image/logo.png" alt="" /></a>
       </div>
-    </section>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="why.html">Why Camillians?</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="carrer.html">Careers</a>
+        <a href="contact.html">Contact Us</a>
+
+        <!-- 👇 Sub-header content inside nav for mobile -->
+        <div class="mobile-subheader">
+          <ul class="info">
+            <li><i class="fa fa-phone"></i> 832-649-6092</li>
+            <li><i class="fa fa-fax"></i> 1-800-658-0781</li>
+            <li><i class="fa fa-envelope"></i> fax@camillianshhs.com</li>
+          </ul>
+
+          <ul class="social-links">
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://x.com/minthu" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <script src="script.js"></script>
   </body>
 </html>
