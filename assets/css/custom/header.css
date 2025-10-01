@@ -308,3 +308,18 @@ header {
     width: 50%;
   }
 }
+
+.mobile-subheader .social-links li {
+  background-color: #b12318;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  padding: 15px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-subheader .social-links li:hover {
+  transform: scale(1.1);
+}
